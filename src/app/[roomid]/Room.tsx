@@ -1,15 +1,15 @@
 "use client";
 
 import { ClientSideSuspense, RoomProvider } from "@liveblocks/react/suspense";
-import { useSearchParams } from "next/navigation";
+import { useParams, useSearchParams } from "next/navigation";
 import { ReactNode, useMemo } from "react";
 import { LiveMap } from "@liveblocks/core";
 import { Loading } from "@/components/Loading";
 
-export function Room({ children }: { children: ReactNode }) {
-  const roomId = useExampleRoomId(
-    "liveblocks:examples:nextjs-tldraw-whiteboard-storage"
-  );
+export function Room({ children, roomId }: { children: ReactNode,roomId:string }) {
+  // const roomId = useExampleRoomId(
+  //   "liveblocks:examples:nextjs-tldraw-whiteboard-storage"
+  // );
 
   return (
     <RoomProvider

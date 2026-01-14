@@ -1,17 +1,11 @@
 "use client";
 
 import "tldraw/tldraw.css";
-import { Tldraw, DefaultStylePanel, DefaultStylePanelContent } from "tldraw";
+import { Tldraw, DefaultStylePanel, DefaultStylePanelContent, DefaultHelperButtons } from "tldraw";
 import { useStorageStore } from "./useStorageStore";
 import { useSelf } from "@liveblocks/react/suspense";
 import { Avatars } from "@/components/Avatars";
 import { Badge } from "@/components/Badge";
-
-/**
- * IMPORTANT: LICENSE REQUIRED
- * To remove the watermark, you must first purchase a license
- * Learn more: https://tldraw.dev/community/license
- */
 
 export function StorageTldraw() {
   // Getting authenticated user info. Doing this using selectors instead
@@ -38,11 +32,12 @@ export function StorageTldraw() {
             >
               <Avatars />
               <DefaultStylePanel />
-              <Badge />
             </div>
           ),
+          DebugPanel: () => null,
         }}
         autoFocus
+
       />
     </div>
   );

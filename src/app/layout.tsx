@@ -5,7 +5,9 @@ import { Providers } from "./Providers";
 import { Suspense } from "react";
 
 export const metadata: Metadata = {
-  title: "Liveblocks",
+  title: "MeetBoard – Interactive Whiteboard for Google Meet",
+  description: "Real-time, interactive whiteboard for Google Meet – draw, collaborate, and brainstorm seamlessly",
+  keywords: ["whiteboard", "collaboration", "real-time"],
 };
 
 const inter = Inter({
