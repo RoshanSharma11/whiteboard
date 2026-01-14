@@ -1,95 +1,51 @@
-<p align="center">
-  <a href="https://liveblocks.io#gh-light-mode-only">
-    <img src="https://raw.githubusercontent.com/liveblocks/liveblocks/main/.github/assets/header-light.svg" alt="Liveblocks" />
-  </a>
-  <a href="https://liveblocks.io#gh-dark-mode-only">
-    <img src="https://raw.githubusercontent.com/liveblocks/liveblocks/main/.github/assets/header-dark.svg" alt="Liveblocks" />
-  </a>
-</p>
+# Collaborative Whiteboard for Google Meet
 
-# Tldraw Whiteboard (Storage)
+> **Work in Progress** - This application is currently under active development. Many features are still being implemented and will be completed soon.
 
-<p>
-  <a href="https://liveblocks.io/examples/tldraw-whiteboard/nextjs-tldraw-whiteboard-storage/preview">
-    <img src="https://img.shields.io/badge/live%20preview-message?style=flat&logo=data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTE2Ljg0OSA0Ljc1SDBsNC44NDggNS4wNzV2Ny4wMDhsMTItMTIuMDgzWk03LjE1IDE5LjI1SDI0bC00Ljg0OS01LjA3NVY3LjE2N2wtMTIgMTIuMDgzWiIgZmlsbD0iI2ZmZiIvPjwvc3ZnPg==&color=333" alt="Live Preview" /> 
-  </a>
-  <a href="https://codesandbox.io/s/github/liveblocks/liveblocks/tree/main/examples/nextjs-tldraw-whiteboard-storage">
-    <img src="https://img.shields.io/badge/open%20in%20codesandbox-message?style=flat&logo=codesandbox&color=333&logoColor=fff" alt="Open in CodeSandbox" />
-  </a>
-  <img src="https://img.shields.io/badge/react-message?style=flat&logo=react&color=0bd&logoColor=fff" alt="React" />
-  <img src="https://img.shields.io/badge/next.js-message?style=flat&logo=next.js&color=07f&logoColor=fff" alt="Next.js" />
-</p>
+A shared whiteboard add-on for Google Meet that enables real-time collaboration during virtual meetings. This tool solves a common problem with traditional screen sharing where all participants are limited to viewing only what the presenter shows.
 
-This example shows how to build a collaborative [tldraw](https://tldraw.dev/)
-canvas with [Liveblocks](https://liveblocks.io) Storage, and
-[Next.js](https://nextjs.org/).
+## The Problem
 
-<img src="https://raw.githubusercontent.com/liveblocks/liveblocks/main/.github/assets/examples/tldraw-whiteboard.png" width="536" alt="tldraw collaborative canvas" />
+In typical video conferencing scenarios with screen sharing:
+- All participants see the exact same view of the shared content
+- Participants cannot explore different parts of a shared board independently
+- When someone needs to see a different section, they must interrupt the meeting to ask the presenter to navigate there
+- This constant back-and-forth disrupts the flow of the meeting (especially in educational settings)
 
-## Getting started
+## The Solution
 
-Run the following command to try this example locally:
+This collaborative whiteboard allows:
+- **Independent Navigation**: Each participant can view and explore different parts of the whiteboard simultaneously without disrupting others
+- **Collaborative Drawing**: Meeting facilitators can write and draw on the whiteboard, and can grant permission to participants to contribute as well
+- **Real-time Synchronization**: All changes are synchronized in real-time across all participants
+- **Flexible Permissions**: Control who can edit vs. who can only view the whiteboard
 
-```bash
-npx create-liveblocks-app@latest --example nextjs-tldraw-whiteboard-storage --api-key
-```
+## Use Case Example
 
-This will download the example and ask permission to open your browser, enabling
-you to automatically get your API key from your
-[liveblocks.io](https://liveblocks.io) account.
+In an educational context:
+- A **professor** draws a complex diagram or writes equations on the whiteboard during a lecture
+- **Students** can independently pan around to examine different parts of the board they need to focus on
+- Students with permission can add their own notes or attempt problems on the whiteboard
+- Everyone stays engaged without interrupting the class flow to request navigation changes
 
-### Manual setup
+This same pattern applies to:
+- Business meetings where team members need to brainstorm collaboratively
+- Design reviews where stakeholders want to examine different details
+- Training sessions where instructors and trainees work together
+- Any scenario requiring shared visual collaboration with flexible viewing
 
-<details><summary>Read more</summary>
+## Tech Stack
 
-<p></p>
+Built with:
+- [Next.js](https://nextjs.org/) - React framework
+- [tldraw](https://tldraw.dev/) - Collaborative canvas
+- [Liveblocks](https://liveblocks.io) - Real-time collaboration infrastructure
+- TypeScript
 
-Alternatively, you can set up your project manually:
+## Status
 
-- Install all dependencies with `npm install`
-- Create an account on [liveblocks.io](https://liveblocks.io/dashboard)
-- Copy your **secret** key from the
-  [dashboard](https://liveblocks.io/dashboard/apikeys)
-- Create an `.env.local` file and add your **secret** key as the
-  `LIVEBLOCKS_SECRET_KEY` environment variable
-- Run `npm run dev` and go to [http://localhost:3000](http://localhost:3000)
-
-</details>
-
-### Deploy on Vercel
-
-<details><summary>Read more</summary>
-
-<p></p>
-
-To both deploy on [Vercel](https://vercel.com), and run the example locally, use
-the following command:
-
-```bash
-npx create-liveblocks-app@latest --example nextjs-tldraw-whiteboard-storage --vercel
-```
-
-This will download the example and ask permission to open your browser, enabling
-you to deploy to Vercel.
-
-</details>
-
-### Develop on CodeSandbox
-
-<details><summary>Read more</summary>
-
-<p></p>
-
-After forking
-[this example](https://codesandbox.io/s/github/liveblocks/liveblocks/tree/main/examples/nextjs-tldraw-whiteboard-storage)
-on CodeSandbox, create the `LIVEBLOCKS_SECRET_KEY` environment variable as a
-[secret](https://codesandbox.io/docs/secrets).
-
-</details>
+This project is currently in development. Core features are being implemented and the Google Meet integration is being finalized. Check back soon for updates!
 
 ## License
 
-The `tldraw` library is provided under the
-[tldraw license](https://github.com/tldraw/tldraw/blob/main/LICENSE.md) which
-allows commercial and non-commercial use. To purchase a business license and
-remove the watermark, contact [sales@tldraw.com](mailto:sales@tldraw.com).
+The `tldraw` library is provided under the [tldraw license](https://github.com/tldraw/tldraw/blob/main/LICENSE.md).
